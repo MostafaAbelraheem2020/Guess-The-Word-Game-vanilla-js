@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: white;
+  padding: 0 15px;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #0a1034;
+  text-align: center;
+}
+header h1 {
+  color: rgb(143, 110, 66);
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 900;
+}
+
+header h1 span {
+  color: #b6561e;
+}
+.content {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: #00968891;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.game-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+  gap: 23px;
+}
+.words-inputs {
+  width: 91%;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+.check {
+  width: 70%;
+  color: white;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.check-word,
+.hint {
+  background-color: #0a1034;
+  color: white;
+  border: navajowhite;
+  padding: 12px 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.check-word {
+  flex: 1;
+}
+.hint {
+  width: 100px;
+  background-color: #b6561e;
+}
+.help-kyes {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+}
+.help-kyes div {
+}
+.help-kyes .key-1,
+.help-kyes .key-2,
+.help-kyes .key-3 {
+  position: relative;
+  text-align: center;
+  border: 2px solid #726946;
+  padding: 10px 26px;
+  width: 100%;
+  border-radius: 10px;
+}
+.help-kyes .key-1 .sp,
+.help-kyes .key-2 .sp,
+.help-kyes .key-3 .sp {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.help-kyes .key-1 .sp {
+  background-color: #b6561e;
+}
+.help-kyes .key-2 .sp {
+  background-color: #ffc107;
+}
+.help-kyes .key-3 .sp {
+  background-color: #8d2929;
+}
+.resault {
+  height: 46px;
+  width: 80%;
+  background-color: antiquewhite;
+  margin: auto;
+  border-radius: 2px 2px 5px 5px;
+  padding: 5px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  padding: 5px 0;
+}
+footer h4 {
+  padding: 0 10px;
+  color: #573d18;
+  text-transform: capitalize;
+  margin: 0;
+}
+/* game area */
+.tray {
+  height: 45px;
+
+  background-color: white;
+  color: black;
+  position: relative;
+  margin: 2px 0 0 70px;
+  width: 80%;
+  display: flex;
+  gap: 2px;
+}
+.tray span {
+  color: #b6561e;
+  position: absolute;
+  left: -66px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  background-color: white;
+  height: 100%;
+  align-content: center;
+  padding: 0px 5px;
+  border: 2px solid #ddd;
+}
+.leter {
+  font-weight: bolder;
+  color: blue;
+  font-size: 45px;
+  border: 1px #9e9e9e;
+  border-radius: 2px;
+  text-align: center;
+  text-transform: capitalize;
+  width: calc(100% / 6);
+  height: 98%;
+  border-style: groove;
+  outline: none;
+  align-self: start;
+}
+.picture {
+  width: 100%;
+  background-size: cover;
+  height: 130px;
+  background-repeat: round;
+  border-radius: 5px;
+}
+.clearBtn {
+  position: absolute;
+  left: -120px;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  color: #f4f4f4;
+  border: none;
+  background-color: #dadada00;
+  font-weight: 500;
+}
+.clearBtn.hide {
+  display: none;
+}
+.resaultDiv {
+  background-color: #ddd;
+  width: 80%;
+  height: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid #535428;
+  margin: auto;
+  color: black;
+  font-weight: bolder;
+  font-size: 44px;
+}
