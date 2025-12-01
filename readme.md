@@ -4,8 +4,7 @@ A simple web-based word guessing game where players try to guess a 6-letter word
 
 ## Screenshot
 
-![Guess The Word Game Interface]
-(/imgs/Guess-The-Word-Game-Screenshot.png)
+![Guess The Word Game Interface](/imgs/Guess-The-Word-Game-Screenshot.png)
 
 ## Game Rules
 
