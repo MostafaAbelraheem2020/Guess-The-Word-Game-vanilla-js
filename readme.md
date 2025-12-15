@@ -1,70 +1,80 @@
 # Guess The Word Game
 
-A simple web-based word guessing game where players try to guess a 6-letter word within 6 attempts (Trays), built using HTML, CSS, and JavaScript.
+A browser-based guessing game where you try to find a hidden 6-letter word in up to 6 rounds using only vanilla HTML, CSS, and JavaScript. 
 
-## Screenshot
+*This README was organized with assistance from AI to streamline its structure and formatting.*
 
-![Guess The Word Game Interface](/imgs/Guess-The-Word-Game-Screenshot.png)
 
-## Game Rules
+## Project screenshots
+    ![Main Game layout](imgs/Guess-The-Word-Game-Screenshot-1)
+    ![Main Game layout](imgs/Guess-The-Word-Game-Screenshot-2)
 
-- The player has a maximum of 6 attempts to guess the secret word.
-- Each attempt is a row of 6 input fields (Tray 1 → Tray 6).
-- After entering the word in the current row and clicking the Check button, the player receives color-coded feedback for each letter:
-  - **Letter Is Correct And In Place** (Orange): The letter is correct and in the right position.
-  - **Letter Is Correct But In Wrong Place** (Yellow): The letter exists in the word but in a different position.
-  - **Letter Is Wrong And Wrong Place** (Red): The letter does not exist in the word.
 
-## Features
 
-- Simple and intuitive interface using text input fields for each letter.
-- Support for up to 6 attempts to guess the word.
-- Visual and textual feedback showing the status of each letter after every attempt.
-- Great for word training exercises or fun mental challenges.
+ 
+## Overview
 
-## How to Run Locally
+- Six trays (attempts), each with six letter inputs.
+- Color feedback after pressing `Check`:
+  - Orange: letter is correct and in the right position.
+  - Yellow: letter is in the word but in a different position.
+  - Red: letter is not in the word.
+- A tray-specific `Clear` button appears after typing your first letter to reset that row.
+- The game randomly picks a word from the built-in list and shows a related image beside the board; used words (and their images) are removed before the next round.
 
-1. Ensure you have a modern browser installed (Chrome, Firefox, Edge, Safari).
-2. Place all project files (such as `index.html`, CSS, and JavaScript files) in the same folder.
-3. Open `index.html` directly in your browser:
-   - Either drag and drop the file into your browser.
-   - Or use Live Server in VS Code with a URL like:
-     ```
-     http://127.0.0.1:5500/index.html
-     ```
+## Quick Start
 
-## Project Structure (Suggested)
+1. Open `index.html` in any modern browser (or use a local server such as VS Code Live Server).
+2. Type one letter per box in the first tray; focus moves automatically.
+3. Press `Check` to evaluate your attempt.
+4. If you are correct, the next tray unlocks with a new secret word and image; otherwise, adjust your guess based on the colors.
+5. After six successful rounds you see a success message summarizing your score.
 
-Guess-The-Word-Game/
-├── index.html # Main game page with UI elements (Trays, inputs, buttons)
-├── style.css # Styling and colors for different letter states
-├── script.js # Game logic (word selection, validation, feedback)
+## Controls & Feedback
 
-## Technologies Used
+- `Check`: validates the current tray and reveals letter feedback.
+- `Clear`: appears inside the active tray after you start typing; clears only that tray.
+- Input navigation: arrow keys move between boxes; backspace clears and moves left; double-click clears a single box.
+- `Hint` button exists in the UI but is not yet wired to logic.
 
-- **HTML5**: Page structure and game elements (input fields for each Tray).
-- **CSS3**: UI styling and color-coded feedback for different letter states.
-- **JavaScript**: Game logic, input validation, and interactive features.
+## Word Pool & Assets
 
-## How to Play
+- Default words: `Create`, `Update`, `Delete`, `Mostaf`, `Circle`, `Family`.
+- Each word has an associated image in `imgs/` shown during its round. (Note: an image for `Mostaf` is referenced as `imgs/mostaf.jpg` but not included in the repository.)
 
-1. Start typing letters in the first Tray (6 letters total).
-2. Click the **Check** button to submit your guess.
-3. Receive feedback on each letter with color indicators.
-4. Continue with the next Tray based on the feedback.
-5. Win by guessing the word before running out of attempts, or lose if all 6 attempts are used.
+## Project Structure
 
-## Optional Features
+- `index.html` — markup for the game layout and controls.
+- `css/style.css` — styling, layout, and color indicators for feedback states.
+- `css/all.min.css`, `css/normalize.css` — font-awesome and normalization helpers.
+- `js/master.js` — game logic (word selection, tray handling, validation, clear button).
+- `imgs/` — game images and a provided screenshot.
+- `Open_Sans/`, `webfonts/` — bundled fonts used by the UI.
 
-- **Hint Button**: Click "Hint" to receive a clue about the word.
-- **New Game**: Reset the game and start with a new secret word.
+## Deployment
 
-## Author
+```json
+{
+  "deployment": {
+    "platform": "Vercel",
+    "status": "under development",
+    "createdBy": "Mostafa Abdellraheem",
+    "github": "https://github.com/MostafaAbelraheem2020",
+    "linkedin": "https://www.linkedin.com/in/mostafa-mohamed-63b87627a/",
+    "whatsapp": "https://wa.me/01010317417"
+  }
+}
+```
 
-Designed and developed by **M.M.Ab**
 
----
+## Technology Notes
 
-## License
+- No build tools required; everything runs directly in the browser.
+- State is kept in memory; reloading the page starts a new game.
 
-This project is open-source and available for educational and personal use.
+## Known Gaps / Future Ideas
+
+- Wire the `Hint` button to reveal a clue or letter.
+- Add input validation to prevent submitting empty trays.
+- Expand the word list and align images for all entries.
+- Improve accessibility (labels, focus outlines, ARIA where needed).
